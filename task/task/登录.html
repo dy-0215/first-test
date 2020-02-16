@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>登录</title>
+        <meta name="keywords" content="html,登录页面">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <link href="style1.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+<body background="./登录png/bgd.png">
+
+    <div style="width: 80%;height: 60%;background:white;position:fixed;margin-top:31%;margin-left:9%;border-radius:8px;">
+        
+        <div class="tou">
+            <img src="./登录png/touxiang.png" alt="头像" width="56%" height="60%"/>
+        </div>
+
+        <div class="huxian">
+            <img src="./登录png/arc.png" alt="弧线" width="65%" height="85%""/>
+        </div>
+    
+        <input class="input1" id="username" type="text" )"
+        placeholder="请输入账号"/>
+
+        <input class="input2" id="password" type="password" placeholder="请输入密码"/>
+
+        <div style="position:absolute;left:7%;top:63%;font-size:12px;color:#666">
+            <a href="#" style="text-decoration:none;">忘记密码</a>
+        </div>
+
+        <div style="position:absolute;left:76%;top:63%;font-size:12px;color:rgb(103, 126, 230)">
+            <a href="#" style="text-decoration:none;">立即注册</a>
+        </div>
+
+       <div class="button" onclick="myClick()">登录</div>
+    </div>
+    <div class="footer1">
+        
+        <hr class="hrLine" color=#ffffff noshade="noshade" style="width:31%;margin-left:6%;float:left;margin-top:3%;"/>
+        <span style="color: white;"> 第三方登录</span>
+        <hr class="hrLine" color=#ffffff noshade="noshade" style="width:31%;float:right;margin-top:3%;"/>
+        </div>
+        <div style="position:absolute;left:19%;top:86%">
+            <a href="#"><img src="./登录png/wx.png" alt="" width="55%" height="55%"/></a>
+         </div>
+         <div style="position:absolute;left:44%;top:86%"">
+            <a href="https://im.qq.com/pcqq/"><img src="./登录png/qq.png" alt="" width="55%" height="55%"/></a> 
+         </div>
+         <div style="position:absolute;left:68%;top:86%"">
+            <a href="#"><img src="./登录png/wb.png" alt="" width="55%" height="55%"/></a> 
+         </div>
+    </div>
+    <script>
+    function myClick(){
+        var usernamestr=document.getElementById("username").value;
+        var passwordstr=document.getElementById("password").value;
+        if((usernamestr==null || usernamestr=="") || (passwordstr==null || passwordstr=="")){
+             alert("用户名或密码不能为空！！");
+         }
+         else{
+             if(usernamestr=="admin" && passwordstr=="123456"){
+                 alert("登录成功！");
+                 window.location.href="http://localhost:8080/a";
+             }
+             else{
+                 alert("用户名或密码错误！！");
+             }
+         }
+     }
+</script>
+</body>
+</html>
